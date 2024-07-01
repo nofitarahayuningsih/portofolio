@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
     <title>noffyysso portofolio</title>
 </head>
 
@@ -12,7 +14,7 @@
     <!-- ini header nav -->
     <header class="nav-container">
         <div class="logo-icon">
-            <img src="assets/logo.png" alt="">
+            <img src="asset/logo.png" alt="">
         </div>
 
         <nav>
@@ -28,19 +30,19 @@
         <!-- ini home content -->
         <section>
             <header>
-                <h1>Hi User, Welcome to website</h1>
+                <h1>Hi User, Welcome to noffyysso portofolio</h1>
             </header>
-
-            <article>
-                <p> ini adalah website portofolio noffyysso</p>
-
-                <div class="banner-container">
-                    <img src="assets/image.png" alt="">
+            <div class=malasngoding-slider>
+                <div class=isi-slider>
+                    <img src="asset/slider1.jpg" alt="Gambar 1">
+                    <img src="asset/slider2.jpg" alt="Gambar 2">
+                    <img src="asset/slider3.jpg" alt="Gambar 3">
                 </div>
-            </article>
+            </div>
         </section>
 
         <hr />
+
         <!-- ini our profile content -->
         <section id="our-profile">
             <header>
@@ -63,6 +65,11 @@
                     <p>Profil 3</p>
                 </div>
 
+                <div class="profile-item">
+                    <div class="profile-icon profile-4"></div>
+                    <p>Profil 4</p>
+                </div>
+
                 <div class="divider">
 
                 </div>
@@ -70,49 +77,69 @@
         </section>
 
         <hr />
+
         <!-- ini portofolio content -->
-        <header id="portofolio">
-            <h1>Portofolio</h1>
-        </header>
-        <img src="../assets/image.png" alt="" width="1000" height="500">
-        <img src="../assets/image.png" alt="" width="1000" height="500">
-        <img src="../assets/image.png" alt="" width="1000" height="500">
-        <img src="../assets/image.png" alt="" width="1000" height="500">
+        <section id="portofolio">
+            <header>
+                <h1>Portofolio</h1>
+            </header>
+            <div class="img-port">
+                <img src="asset/portofolio1.png" alt="" width="700" height="800">
+                <img src="asset/portofolio2.png" alt="" width="700" height="800">
+                <img src="asset/portofolio3.png" alt="" width="700" height="800">
+                <img src="asset/portofolio4.jpg" alt="" width="700" height="800">
+                <img src="asset/portofolio5.jpg" alt="" width="700" height="800">
+                <img src="asset/portofolio6.jpg" alt="" width="700" height="800">
+            </div>
+        </section>
+
         <hr />
 
         <!-- ini message us content -->
-        <section>
-            <div id="message">
-                <div class="form-message">
-                    <h2>Message Us</h2>
+        <section id="message">
+            <div class="container-msg">
+                <div class="form-container">
+                    <h2>Pesan Kami</h2>
                     <label for="nama">Nama:</label>
                     <input type="text" id="nama" name="nama"><br>
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email"><br>
 
                     <label for="tanggal-lahir">Tanggal Lahir:</label>
                     <input type="date" id="tanggal-lahir" name="tanggal-lahir"><br>
 
-                    <label>Jenis Kelamin:</label>
-                    <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki-Laki">
-                    <label for="laki-laki">Laki-Laki</label>
-                    <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan">
-                    <label for="perempuan">Perempuan</label><br>
+                    <label>Jenis Kelamin:</label><br>
+                    <div class="inline">
+                        <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki-Laki">
+                        <label for="laki-laki">Laki-Laki</label>
+                    </div>
+                    <div class="inline">
+                        <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan">
+                        <label for="perempuan">Perempuan</label>
+                    </div>
+                    <div style="clear: both;"></div>
+
+                    <br>
 
                     <label for="pesan">Pesan:</label>
                     <textarea id="pesan" name="pesan" rows="4"></textarea><br>
 
-                    <button>Submit</button>
+                    <button onclick="tampilkanPesan()">Submit</button>
+
                 </div>
 
-                <div class="output-message">
-                    <h2>Output</h2>
+                <div class="output-container">
+                    <!-- <h2>Output</h2> -->
                     <p id="current-time"></p>
                     <p id="output-nama"></p>
+                    <p id="output-email"></p>
                     <p id="output-tanggal-lahir"></p>
                     <p id="output-jenis-kelamin"></p>
                     <p id="output-pesan"></p>
-
                 </div>
             </div>
+
         </section>
 
     </main>
